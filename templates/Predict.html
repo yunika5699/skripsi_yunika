@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+      .uploadFile{
+        display : flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      #label2{
+        display : none;
+      }
+
+      .btnUpload {
+        background-color: #68b0ab;
+        border: none;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top : 50px;
+        margin-left : 5px;
+        margin-right: 5px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 890px) {
+        #label { display: none; } 
+        #label2 {display : block;}
+      }
+
+
+  </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>Get Prediction - Nama Aplikasi</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/images/icon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="{{ url_for('home') }}">Nama Aplikasi</a></h1>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('info') }}">Info</a></li>
+          <li class="get-started"><a href="{{ url_for('predict') }}">Get Prediction</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section  class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2></h2>
+          <ol>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li>Get Prediction</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+            <div>
+              <h1>Get Your Prediction</h1>
+              <h2>Upload or Drag and Drop Your Images to Get the Prediction</h2>
+            </div>
+          </div>
+          <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+            <img src="static/assets/img/images/doctor.svg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+   
+
+    <section class="inner-page section-bg">
+      <!-- <div>
+        <form class="uploadFile" action="" method=post enctype=multipart/form-data>
+          <p>Upload file:</p>
+          <div style="width:50%;" class="custom-file mb-3">
+            <label id="label" class="custom-file-label" for="customFile">Browse or Drag and Drop Your Image Here</label>
+            <input class="custom-file-input" type=file name=file  accept="image/x-png,image/gif,image/jpeg" multiple>
+            <input id="label2" type="file" name="file">
+          </div>
+          <input class="btnUpload" type=submit value=Upload>
+        </form>
+      </div> -->
+
+      <div>
+        {{ dropzone.load_css() }}
+        {{ dropzone.style('border:2px dashed #68b0ab; margin-left:25px; margin-right:25px;  min-height: 200px;') }}
+        {{ dropzone.create(action='predict') }}
+        <center><a href="{{ url_for('result') }}" class="btnUpload" type="submit">Predict</a></center>
+        {{ dropzone.load_js() }}
+        {{ dropzone.config(custom_init='dz = this;document.getElementById("upload").addEventListener("click", function handler(e) {dz.processQueue();});',
+                     custom_options='autoProcessQueue: true, addRemoveLinks: true, parallelUploads: 1,') }}
+      </div>
+      
+    </section>
+  </main>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>

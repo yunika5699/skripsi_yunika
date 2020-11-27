@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Info - Nama Aplikasi</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/images/icon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="{{ url_for('home') }}">Nama Aplikasi</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li class="active"><a href="{{ url_for('info') }}">Info</a></li>
+          <!-- <li><a href="#contact">Contact Us</a></li> -->
+
+          <li class="get-started"><a href="{{ url_for('predict') }}">Get Prediction</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2></h2>
+          <ol>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li>Info</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+            <div>
+              <h1>What You Need To Know About Diabetic Retinopathy</h1> 
+            </div>
+          </div>
+          <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+            <img src="static/assets/img/images/question.svg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h1>Overview</h1>
+          <p>Diabetic retinopathy is a diabetes complication that affects eyes.
+            It's caused by damage to the blood vessels of the light-sensitive tissue at the back of the eye (retina). 
+            The longer you have diabetes and the less controlled your blood sugar is, the more likely you are to develop this eye complication. 
+            At first, diabetic retinopathy may cause no symptoms or only mild vision problems. 
+            Eventually, it can cause blindness and has affected the vision of <b style="font-size:22px;">2.6 million people</b> in the world and is responsible for <b style="font-size:22px;">2.6% of global blindness</b> (0.84 million of 32.4 million people).</p> 
+        </div>
+        <div class="col-lg-12 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+          <center><img src="static/assets/img/images/overview.svg" class="img-fluid" alt="" style="width:30%;"></center>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    <section id="pricing" class="pricing">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Stages of Diabetic Retinopathy</h2>
+          <p>There are two main stages of diabetic eye disease.</p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 box" data-aos="fade-right">
+            <h3>Stage 1 :</h3>
+            <h4>Non-Proliferative Diabetic Retinopathy<span>(NPDR)</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i>The early stage of diabetic eye disease</li>
+              <li><i class="bx bx-check"></i>With NPDR, tiny blood vessels leak, making the retina swell (macular edema).</li>
+              <li><i class="bx bx-check"></i>Sometimes tiny particles called exudates can form in the retina. </li>
+              <li><i class="bx bx-check"></i>If you have NPDR, your vision will be blurry.</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 box" data-aos="fade-left">
+            <h3>Stage 2:</h3>
+            <h4>Proliferative Diabetic Retinopathy<span>(PDR)</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i>Happens when the retina starts growing new blood vessels.</li>
+              <li><i class="bx bx-check"></i>Bleedings happen on the new vessels</li>
+              <li><i class="bx bx-check"></i>A few dark floaters can be seen and block the vision</li>
+              <li><i class="bx bx-check"></i>PDR is very serious, and can steal both central and peripheral (side) vision.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Risk Factor of Diabetic Retinopathy</h2>
+          <p>Anyone who has diabetes can develop diabetic retinopathy. Risk of developing the eye condition can increase as a result of:</p>
+        </div>
+
+        <div class="owl-carousel gallery-carousel" data-aos="fade-up">
+          <a href="static/assets/img/images/pregnancy.png" class="venobox" data-gall="gallery-carousel"><img src="static/assets/img/images/pregnancy.png" alt=""><p style="text-align: center;">Pregnancy</p></a>
+          <a href="static/assets/img/images/blood.png" class="venobox" data-gall="gallery-carousel"><img src="static/assets/img/images/blood.png" alt=""><p style="text-align: center;">High Blood Pressure</p></a>
+          <a href="static/assets/img/images/duration.png" class="venobox" data-gall="gallery-carousel"><img src="static/assets/img/images/duration.png" alt=""><p style="text-align: center;">Duration of diabetes</p></a>
+          <a href="static/assets/img/images/cholestrol.png" class="venobox" data-gall="gallery-carousel"><img src="static/assets/img/images/cholestrol.png" alt=""><p style="text-align: center;">Cholestrol</p></a>
+          <a href="static/assets/img/images/smoking.png" class="venobox" data-gall="gallery-carousel"><img src="static/assets/img/images/smoking.png" alt=""><p style="text-align: center;">Tobacco Use</p></a>
+          <a href="static/assets/img/images/sugar.png" class="venobox" data-gall="gallery-carousel"><img src="static/assets/img/images/sugar.png" alt=""><p style="text-align: center;">Poor control of blood sugar level</p></a>
+        </div>
+
+      </div>
+    </section>
+
+   
+
+    <!-- <section class="inner-page">
+      <div class="container">
+        <p>
+          Example inner page template
+        </p>
+      </div>
+    </section> -->
+
+  </main>
+  <!-- End #main -->
+
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
+
+    <div class="footer-newsletter" data-aos="fade-up">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Get Prediction</h4>
+            <p>Taking an active role in diabetes management can go a long way toward preventing complications.</p>
+            <div id="btnStart"><a style="color:white;" href="#">Get Started</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+  <script src="static/dropzone-5.7.0/dist/dropzone.js"></script>
+
+
+</body>
+
+</html>

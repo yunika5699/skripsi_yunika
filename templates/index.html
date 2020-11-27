@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Nama Aplikasi</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/images/icon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="{{ url_for('home') }}">Nama Aplikasi</a></h1>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+          <!-- <li><a href="#details">Overview</a></li> -->
+          <!-- <li><a href="#features">Complications</a></li>
+          <li><a href="#testimonials">Severity</a></li> -->
+          <li><a href="{{ url_for('info') }}">Info</a></li>
+          <!-- <li><a href="#contact">Contact Us</a></li> -->
+
+          <li class="get-started"><a href="{{ url_for('predict') }}">Get Prediction</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+          <div>
+            <h1>What is Diabetic Retinopathy?</h1>
+            <h2>A diabetes complication that affects eyes. It's caused by damage to the blood vessels of the light-sensitive tissue at the back of the eye (retina).</h2>
+            <a href="{{ url_for('info') }}" class="download-btn"><i class="icofont-info-circle"></i>More Info</a>
+            <a href="{{ url_for('predict') }}" class="download-btn"><i class="icofont-eye-alt"></i>Get Prediction</a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+          <img src="static/assets/img/images/doctor.svg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main">
+    <!-- ======= Details Section ======= -->
+    <section id="details" class="details">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+            <img src="static/assets/img/images/doctor_3.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-4" data-aos="fade-up">
+            <h3>Diabetic Retinopathy Symptoms</h3>
+            <p class="font-italic">
+              Here are some Diabetic Retinopathy Symptoms that could be found in people with the infected eyes.
+            </p>
+            <ul>
+              <li><i class="icofont-check"></i>Have blurred vision</li>
+              <li><i class="icofont-check"></i>Suffer from the impairment of color vision</li>
+              <li><i class="icofont-check"></i>Seeing an increasing number of floaters</li>
+              <li><i class="icofont-check"></i>Patches or streaks that block the vision</li>
+              <li><i class="icofont-check"></i>Have poor night vision</li>
+              <li><i class="icofont-check"></i>Sudden and total loss of vision</li>
+            </ul>
+            <p>
+              It is important to make sure that the risk of vision loss is minimized. The only way people with diabetes can prevent DR is to attend every eye examination scheduled by their doctor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Details Section -->
+    
+    <!-- ======= App Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Complications</h2>
+          <p>Some complications that can be caused by diabetic retinopathy</p>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
+            <div class="content d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 icon-box" data-aos="fade-up">
+                  <i class="icofont-dotted-right"></i>
+                  <h4>Vitreous Hemorrhage</h4>
+                  <p> The new blood vessels may bleed into the clear, jelly-like substance that fills the center of the eye. If the amount of bleeding is small, only a few dark spots (floaters) can be seen</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="icofont-dotted-right"></i>
+                  <h4>Retinal Detachment</h4>
+                  <p>The abnormal blood vessels associated with diabetic retinopathy stimulate the growth of scar tissue, which can pull the retina away from the back of the eye</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="icofont-dotted-right"></i>
+                  <h4>Glaucoma</h4>
+                  <p>New blood vessels may grow in the front part of the eye and interfere with the normal flow of fluid out of the eye, causing pressure in the eye to build up.</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="icofont-dotted-right"></i>
+                  <h4>Blindness</h4>
+                  <p>Eventually, diabetic retinopathy, glaucoma or both can lead to complete vision loss.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="static/assets/img/images/doctor_2.svg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End App Features Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Diabetic Retinopathy Severity</h2>
+          <p>The severity level of diabetic retinopathy can be divided into 5 classes</p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel" data-aos="fade-up">
+
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="static/assets/img/images/NoDR.png" class="testimonial-img" alt="">
+              <h3>No Diabetic Retinopathy</h3>
+              <h4>Level 0</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Healthy eyes without any symptoms of diabetic retinopathy.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="static/assets/img/images/Mild.png" class="testimonial-img" alt="">
+              <h3>Mild</h3>
+              <h4>Level 1</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                At this stage, microaneurysms occur. They are small areas of balloon-like swelling in the retina's tiny blood vessels.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="static/assets/img/images/Moderate.png" class="testimonial-img" alt="">
+              <h3>Moderate</h3>
+              <h4>Level 2</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                This stage is when blood vessels that nourish the retina are blocked.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="static/assets/img/images/Severe.png" class="testimonial-img" alt="">
+              <h3>Severe</h3>
+              <h4>Level 3</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                In this stage, many more blood vessels are blocked, depriving several areas of the retina with their blood supply. These areas of the retina send signals to the body to grow new blood vessels for nourishment.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="static/assets/img/images/Proliferate.png" class="testimonial-img" alt="">
+              <h3>Proliferate</h3>
+              <h4>Level 4</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                At this stage, the signals sent by the retina for nourishment trigger the growth of new blood vessels. By themselves, these blood vessels do not cause symptoms or vision loss. However, if they leak blood, severe vision loss and blindness can result.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Testimonials Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section">
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>Things that You May Want to Know</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="accordion-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#accordion-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                <p>
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#accordion-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#accordion-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                <p>
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#accordion-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-4" class="collapse" data-parent=".accordion-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#accordion-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-5" class="collapse" data-parent=".accordion-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-newsletter" data-aos="fade-up">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Get Prediction</h4>
+            <p>Taking an active role in diabetes management can go a long way toward preventing complications.</p>
+            <div id="btnStart"><a style="color:white;" href="{{ url_for('predict') }}">Get Started</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+  <script src="static/dropzone-5.7.0/dist/dropzone.js"></script>
+
+</body>
+
+</html>
