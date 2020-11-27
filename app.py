@@ -97,6 +97,7 @@ def result():
 
 
 
+
 @app.route('/show/<filename>')
 def uploaded_file(filename):
     sigmaX = 10
